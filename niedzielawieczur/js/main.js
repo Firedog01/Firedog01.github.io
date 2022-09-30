@@ -66,6 +66,16 @@ function drawDot(x, y) {
     $('#dot').css('top', y);
 }
 
+function drawFirstDot() {
+    var image = document.getElementById('map-image');
+    let client_x = image.clientWidth;
+    let client_y = image.clientHeight;
+    console.log(client_x, client_y);
+    let relative_x = ((c.long + 180) / 360) * client_x;
+    let relative_y = ((-c.lat + 90) / 180) * client_y;
+    console.log(relative_x, relative_y);
+    drawDot(relative_x, relative_y);
+}
 
 
 $('#map-image').click(function (e) { 
@@ -73,6 +83,7 @@ $('#map-image').click(function (e) {
 });
 
 counter();
+setTimeout(drawFirstDot, 500);
 document.getElementById('map-image').ondragstart = function () { return false; };
 
 
