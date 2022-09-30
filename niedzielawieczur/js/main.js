@@ -63,10 +63,13 @@ function drawDot() {
 
 }
 
+
+
 $('#map-image').click(function (e) { 
     updateCoords(e.pageX, e.pageY);
 });
 
 counter();
+document.getElementById('map-image').ondragstart = function () { return false; };
 
 
