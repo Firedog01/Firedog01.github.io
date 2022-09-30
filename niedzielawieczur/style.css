@@ -3,12 +3,17 @@
 	src: url('DigitalDismay.otf');
 }
 
+@font-face {
+	font-family: 'polish';
+	src: url('Polish.ttf');
+}
+
 body {
     background: #161622;
     background-image: url(bg.png);
-    background-size: cover;
+    background-size:cover;
     color: white;
-    font-family: Arial;
+    font-family: polish;
     text-align: center;
 }
 
