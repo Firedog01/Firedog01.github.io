@@ -57,10 +57,13 @@ function updateCoords(px, py) {
     console.log(c_x, c_y);
     c.lat = c_y;
     c.long = c_x;
+    drawDot(relative_x, relative_y);
 }
 
-function drawDot() {
-
+function drawDot(x, y) {
+    $("#dot").show();
+    $('#dot').css('left', x);
+    $('#dot').css('top', y);
 }
 
 
