@@ -22,7 +22,7 @@ function counter() {
 
     let s_diff = Math.round((sunsetInt - now.getTime()) / 1000);
 
-    if(s_diff < 0) {
+    if(s_diff < 0 || true) {
         $('#counter').hide();
         $('#niedzielawieczur').show();
     }
