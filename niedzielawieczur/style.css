@@ -3,14 +3,6 @@
 	src: url('DigitalDismay.otf');
 }
 
-.dot {
-    height: 2px;
-    width: 2px;
-    position: absolute;
-    border: 2px solid red;
-    z-index: 10;
-}
-
 body {
     background: #161622;
     color: white;
@@ -57,9 +49,11 @@ a {
 }
 
 .eatFotter {
-    position: sticky;
+    position: fixed;
+    left: 0%;
+    bottom: 50px;
     background: #161622;
-    border-radius: 200%;
+    border-radius: 0 0 200% 200%;
     width: 100%;
     height: 40px;
     border: #00aa00;  
@@ -70,7 +64,9 @@ a {
 }
 
 .footer {
-    position: sticky;
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
     padding: 5px;
     margin: 0px -5px 0px -5px;
     background: #262632;
