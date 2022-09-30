@@ -35,8 +35,8 @@ function counter() {
     s_diff = Math.floor(s_diff / 24);
     let day = s_diff;
 
-    let timeStr = `${day} ${hour}:${min}:${sec}`;
-    
+    let timeStr = `${day} - ${hour}:${min}:${sec}`;
+
     $('#counter').html(timeStr);
     setTimeout(counter, 10);
 }
