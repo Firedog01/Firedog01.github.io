@@ -1,3 +1,67 @@
-.wrapper {
-    background: greenyellow;
+@font-face {
+	font-family: 'clockFont';
+	src: url('DigitalDismay.otf');
+}
+
+body {
+    background: #282522;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+.title {
+    padding: 10px;
+    font-size: 40px;
+    border: #00aa00;
+    border-width: 0px 5 5 5;
+    border-radius: 5em;
+    border-style: solid;
+    height: 65px;
+    margin: 0 0 40px 0;
+}
+
+.box {
+    display: grid;
+    left: 0%;
+    padding: 10px;
+    border: #00aa00;  
+    border-style: solid;
+    border-width: 15px 0 0 0;
+    border-radius: 10px;
+    background: #ffffff33;
+    font-size: 20px;
+    margin: auto;
+    min-width: 300px;
+    max-width: 40%;
+    height: 20%;
+}
+
+.counter {
+    font-family: clockFont;
+    font-size: 400%;
+}
+
+.eatFotter {
+    background: #282522;
+    border-radius: 200%;
+    position: fixed;
+    width: 100%;
+    bottom: 30px;
+    left: 0%;
+    height: 40px;
+}
+
+.footer {
+    padding: 5px;
+    background: #ffffff33;
+    border: #00aa00;  
+    border-style: solid;
+    border-width: 0 0 5px 0;
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
 }
