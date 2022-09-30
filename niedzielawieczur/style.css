@@ -13,11 +13,11 @@ body {
 }
 
 a {
-    color: green;
+    color: #aaaaff;
 }
 
 .title {
-    background: #36365277;
+    background: #262636bb;
     padding: 10px;
     font-size: 40px;
     margin: -7px -5px 40px -5px;
@@ -25,18 +25,17 @@ a {
     border: #161620;  
     border-style: solid;
     border-width: 20px 0px 0px 0px;
-    border-radius: 0 0 0 0;
 }
 
 .box {
     display: inline-block;
     left: 0%;
     padding: 10px;
-    border: #00aa00;  
+    border: #363660;  
     border-style: solid;
-    border-width: 0 0 0 0;
-    border-radius: 10px;
-    background: #36365277;
+    border-width: 0;
+    border-radius: 5px;
+    background:  #262636bb;
     font-size: 20px;
     margin: 10px 10px 50px 10px;
     min-width: 300px;
@@ -48,14 +47,6 @@ a {
 .counter {
     font-family: clockFont;
     font-size: 400%;
-}
-
-.dot {
-    height: 2px;
-    width: 2px;
-    position: absolute;
-    border: 2px solid red;
-    z-index: 10;
 }
 
 .eatFotter {
@@ -79,12 +70,11 @@ a {
     right: 0%;
     bottom: 0%;
     padding: 5px;
-    margin: 0px -5px 0px -5px;
-    background: #262632;
+    margin: 0px 0px 0px 0px;
+    background: #262636ee;
     border: #161620;  
     border-style: solid;
     border-width: 0px 0px 10px 0px;
-    border-radius: 0 0 0 0;
     width: auto;
     font-size: 15px;
     z-index: 1;
