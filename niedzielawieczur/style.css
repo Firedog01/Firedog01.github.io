@@ -4,21 +4,22 @@
 }
 
 body {
-    background: #282522;
+    background: #161622;
     color: white;
     font-family: Arial;
     text-align: center;
 }
 
 .title {
+    background: #ffffff11;
     padding: 10px;
     font-size: 40px;
-    border: #00aa00;
-    border-width: 0px 5 5 5;
-    border-radius: 5em;
+    border: #009900;
+    border-width: 0 0 10px 0;
+    border-radius: 0 0 15% 15%;
     border-style: solid;
-    height: 65px;
-    margin: 0 0 40px 0;
+    margin: -7px -5px 40px -5px;
+    width: auto;
 }
 
 .box {
@@ -27,9 +28,9 @@ body {
     padding: 10px;
     border: #00aa00;  
     border-style: solid;
-    border-width: 15px 0 0 0;
+    border-width: 10px 0 0 0;
     border-radius: 10px;
-    background: #ffffff33;
+    background: #ffffff11;
     font-size: 20px;
     margin: auto;
     min-width: 300px;
@@ -43,18 +44,21 @@ body {
 }
 
 .eatFotter {
-    background: #282522;
+    background: #161622;
     border-radius: 200%;
     position: fixed;
     width: 100%;
-    bottom: 30px;
+    bottom: 29px;
     left: 0%;
     height: 40px;
+    border: #00aa00;  
+    border-style: solid;
+    border-width: 0 0 5px 0;
 }
 
 .footer {
     padding: 5px;
-    background: #ffffff33;
+    background: #ffffff11;
     border: #00aa00;  
     border-style: solid;
     border-width: 0 0 5px 0;
