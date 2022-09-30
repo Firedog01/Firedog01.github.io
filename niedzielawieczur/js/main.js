@@ -1,6 +1,6 @@
 let c = {
-    x: 51.77058,
-    y: 19.47395
+    lat: 51.77058,
+    long: 19.47395
 } 
 
 function nextDate(dayIndex) {
@@ -17,7 +17,7 @@ function prependZero(num) {
 function counter() {
     let now = new Date();
     let nextSunday = nextDate(0);
-    var times = SunCalc.getTimes(nextSunday, c.x, c.y);
+    var times = SunCalc.getTimes(nextSunday, c.lat, c.long);
     let sunsetInt = times.sunset.getTime();
 
     let s_diff = Math.round((sunsetInt - now.getTime()) / 1000);
@@ -46,17 +46,17 @@ function counter() {
 function updateCoords(px, py) {
     var image = document.getElementById('map-image');
     var position = image.getBoundingClientRect();
-    var x = position.left;
-    var y = position.top;
-    let ix = px - x;
-    let iy = py - y;
-    console.log(ix, iy);
-    let cx = image.clientWidth;
-    let cy = image.clientHeight;
-    console.log(cx, cy);
-    let rel_x = (ix / cx) * 360 - 180;
-    let rel_y = (iy / cy) * 360 - 180;
-    console.log(rel_x, rel_y);
+    let relative_x = px - position.left;
+    let relative_y = py - position.top;
+    console.log(relative_x, relative_y);
+    let client_x = image.clientWidth;
+    let client_y = image.clientHeight;
+    console.log(client_x, client_y);
+    let c_x = (relative_x / client_x) * 360 - 180;
+    let c_y = -((relative_y / client_y) * 180 - 90);
+    console.log(c_x, c_y);
+    c.lat = c_y;
+    c.long = c_x;
 }
 
 function drawDot() {
