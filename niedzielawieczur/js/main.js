@@ -1,6 +1,7 @@
-function getTimeStr(time) {
-    return time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds();
-}
+let c = {
+    x: 51.77058,
+    y: 19.47395
+} 
 
 function nextDate(dayIndex) {
     var today = new Date();
@@ -16,7 +17,7 @@ function prependZero(num) {
 function counter() {
     let now = new Date();
     let nextSunday = nextDate(0);
-    var times = SunCalc.getTimes(nextSunday, 51.77058, 19.47395);
+    var times = SunCalc.getTimes(nextSunday, c.x, c.y);
     let sunsetInt = times.sunset.getTime();
 
     let s_diff = Math.round((sunsetInt - now.getTime()) / 1000);
@@ -41,6 +42,30 @@ function counter() {
     $('#counter').html(timeStr);
     setTimeout(counter, 10);
 }
+
+function updateCoords(px, py) {
+    var image = document.getElementById('map-image');
+    var position = image.getBoundingClientRect();
+    var x = position.left;
+    var y = position.top;
+    let ix = px - x;
+    let iy = py - y;
+    console.log(ix, iy);
+    let cx = image.clientWidth;
+    let cy = image.clientHeight;
+    console.log(cx, cy);
+    let rel_x = (ix / cx) * 360 - 180;
+    let rel_y = (iy / cy) * 360 - 180;
+    console.log(rel_x, rel_y);
+}
+
+function drawDot() {
+
+}
+
+$('#map-image').click(function (e) { 
+    updateCoords(e.pageX, e.pageY);
+});
 
 counter();
 
